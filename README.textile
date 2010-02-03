@@ -20,7 +20,7 @@ Just enjoy this toy :)
 
 h1. Snapshot
 
-!imageurl!:git_img/screenshot.png
+!imageurl!:http://cloud.github.com/downloads/c9s/Vimana/Screen_shot_2009-12-14_at_9.13.10_AM.png
 
 h1. Author
 
