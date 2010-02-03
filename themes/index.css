@@ -1,0 +1,157 @@
+body{
+	overflow: hidden;
+	background-color: #3A6EA5;
+}
+
+#block{
+	margin: 0 auto;
+	margin-top: 70px;
+	width: 500px;
+	height: 200px;
+}
+
+#top_question_block{
+	border:0px;
+	background-color: #000000;
+	margin-left:40px;
+		border:#0000FF 3px double;
+}
+
+#question_block{
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#out_question{
+	width: 100px;
+	margin-top:170px;
+}
+
+#in_question{
+	width: 100px;
+	margin-top:170px;
+}
+
+#question{
+	width:220px;
+	height:200px;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 200px;
+	text-align: center;
+}
+
+#question_block .bigWord{
+	font-size: 50px;
+}
+
+#question_block .midWord{
+	font-size: 25px;
+}
+
+#question_block .smaWord{
+	font-size: 15px;
+}
+
+#answer{
+	margin-top: 20px;
+	clear:both;
+}
+
+#answer #ide{
+	background-color: #D4D0C8;
+	margin-left: 20px;
+	width: 485px;
+	height: 30px;
+}
+
+#answer #invIME{
+	position: absolute;
+	background-color: black;
+	border-width: 0;
+	top:100px;
+	margin-left:50px;
+	/*Do the invisible effect*/
+	z-index: -1;
+}
+
+#ide #check{
+	font-size: 15px;
+	font-weight:bolder;
+	text-align: center;
+	width: 35px;
+}
+
+#ide #left_input{
+	padding-left: 5px;
+	letter-spacing: 2px;
+	background-color: #AAAAAA;
+	font-weight: 700;
+	font-family: Arial, sans serif;
+}
+
+#ide #left_input.correct{
+	background-color: blue;
+}
+
+#ide #left_input.incorrect{
+	background-color: gray;
+	color: red;
+}
+
+
+#ide #right_input{
+	width: 300px;
+	background-color: #AAAAAA;
+	letter-spacing: 2px;
+}
+
+#error{
+	width: 200px;
+	background-color: #3A6EA5;
+	position: relative;
+	top: 20px;
+	left: 140px;
+	clear:both;
+}
+
+#error.okay{
+	background-color: #3A6EA5;
+}
+
+#error.requestError{
+	background-color: red;
+}
+
+#signature{
+	font-size: 8pt;
+	font-family:Tahoma, Verdana, Arial, sans serif;
+	position:absolute;
+	bottom:0px;
+	right:5px;
+}
+
+#icons{
+	width:32px;
+	height:30px;
+}
+
+#memo{
+	width:200px;
+	height:500px;
+	background-color: #FFEEDD;
+	position:absolute;
+	top:20px;
+	right:20px;
+}
+
+#ajaxLoader{
+	position:relative;
+	top:100px;
+	left: 236px;
+	float:left;
+}
+
+#ajaxLoader.loaded{
+	display:none;
+}
