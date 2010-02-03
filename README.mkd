@@ -1,0 +1,34 @@
+Chinese Introduction
+====================
+
+[Please click me](http://eragonj.hax4.in/?p=91)
+
+Introduction
+============
+
+This project is called *Rainbow* for newbies who want to practice typing. It is an integrated IME that now supports multiple different IME like [Liu](http://boshiamy.com/) and [TsangJei](http://www.eztyping.com.tw/) .
+
+It's my honor If you are volunteered to help me to expand the table and usability of the online IME.
+
+ReadMe
+======
+
+Please feel free to go to my demo website [Here](http://rainbow.hax4.in) .First of all , I have to say sorry to you guys that I have no permission to fix Liu's table at Hax4, so I can't show you the result in Liu. But fortunately , the other table works as usual ! so plz use *F2* to change to the IME !
+
+And then see the word to type the correct *key root* to practice !
+
+By the way , The first alert is a specific URL that you can assign by yourself ! Take an example , you can choose any website encoded in *UTF-8*. Then the program will automatically fetch the traditional Chinese and show them up on the screen !!
+
+Just enjoy this toy :)
+
+Snapshot
+========
+
+![imageurl](http://cloud.github.com/downloads/c9s/Vimana/Screen_shot_2009-12-14_at_9.13.10_AM.png)
+
+Author
+======
+
+*Nick:* EragonJ
+*Email:* jack.xxlong@gmail.com
+*Blog:* [Here](http://eragonj.hax4.in)
