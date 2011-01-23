@@ -1,5 +1,5 @@
 <?php
 	$username = 'EragonJ';
-	$password = '';
+	$password = 'ejtest';
 	$db    = 'hax4_rainbow';
 ?>

@@ -8,7 +8,6 @@
 	$content = curl_exec($ch);
 	curl_close($ch);
 
-
 	$pattern = "/([\x{4e00}-\x{9fff}])/u";
 
 	preg_match_all($pattern,$content,$result);
