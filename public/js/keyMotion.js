@@ -133,7 +133,7 @@ function keyCheck(confirmedKey)
 
   var question = document.getElementById("question").innerHTML;
 
-  //find the word and matched
+  // find the word and matched
   if (question == confirmedKey) {
     isKeyMatched(true);
     keyClear('both');
@@ -141,7 +141,7 @@ function keyCheck(confirmedKey)
 
     return true;
   }
-  //find the word but not matched
+  // find the word but not matched
   else {
     isKeyMatched(false);
     keyClear('right');
@@ -179,6 +179,8 @@ function isKeyMatched(which)
   else {
     left_input.className = 'incorrect';
   }
+
+  wordIncrease(which);
 }
 
 function keyClear(which)
