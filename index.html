@@ -1,19 +1,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-<link rel=stylesheet type="text/css" href="themes/index.css">
-<script type="text/javascript" src="scripts/jquery-1.4.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.corner.js"></script>
-<script type="text/javascript" src="scripts/jQinitial.js"></script>
-<script type="text/javascript" src="scripts/initial.js"></script>
-<script type="text/javascript" src="scripts/utils.js"></script>
-<script type="text/javascript" src="scripts/question.js"></script>
-<script type="text/javascript" src="scripts/keyMotion.js"></script>
+<link rel=stylesheet type="text/css" href="public/css/index.css">
+<!-- I have to modify loading priority later  -->
+<script type="text/javascript" charset="utf-8">
+  var IME = {};
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="public/js/jquery.corner.js"></script>
+<script type="text/javascript" src="public/js/jQinitial.js"></script>
+<script type="text/javascript" src="public/js/initial.js"></script>
+<!-- Include tables  -->
+<script type="text/javascript" src="tables/tsangjei.js"></script>
+<script type="text/javascript" src="tables/liu.js"></script>
+<!-- End -->
+<script type="text/javascript" src="public/js/utils.js"></script>
+<script type="text/javascript" src="public/js/question.js"></script>
+<script type="text/javascript" src="public/js/keyMotion.js"></script>
 <title>Online Liu/Tsangjei IME Test Tool</title>
 </head>
 <body>
 <div id="block">
-	<img id="ajaxLoader" src="images/ajax-loader2.gif"></img>
+	<img id="ajaxLoader" src="public/images/ajax-loader2.gif"></img>
 	<table id="top_question_block">
 		<tr id="question_block">
 			<td><div id="out_question">&nbsp;</div></td>
@@ -24,7 +32,7 @@
 	<div id="answer">
 		<table id="ide">
 		<tr>
-			<td id="check"><img id="icons" src="images/liu.gif"></img></td><td id="left_input"></td><td id="right_input">&nbsp;</td>
+			<td id="check"><img id="icons" src="public/images/liu.gif"></img></td><td id="left_input"></td><td id="right_input">&nbsp;</td>
 		</tr>
 		</table>
 		<input type="text" id="invIME" maxlength="4"></input>

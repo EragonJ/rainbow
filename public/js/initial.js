@@ -6,7 +6,7 @@ function initial()
 	var invIME        = document.getElementById("invIME");
 	var promptTxt     = "Plz Enter an URL";
 			exUrl         = "http://boshiamy.com/";
-			request       = createRequest();
+			request       = createRequest(); // This is for fetching questions
 			KMrequest     = createRequest();
 		  CKrequest     = createRequest();
 			questionReady = false;
@@ -30,5 +30,4 @@ function initial()
 
 	//get the original question from the specific url
 	getQuestion();
-	
 }
