@@ -1,3 +1,4 @@
+
 body{
 	overflow: hidden;
 	background-color: #3A6EA5;
@@ -69,10 +70,8 @@ body{
 	position: absolute;
 	background-color: black;
 	border-width: 0;
-	top:100px;
-	margin-left:50px;
-	/*Do the invisible effect*/
-	z-index: -1;
+	top:-9999px;
+  left:-9999px;
 }
 
 #ide #check{
@@ -154,4 +153,46 @@ body{
 
 #ajaxLoader.loaded{
 	display:none;
+}
+
+#scoreBoard{
+  position:absolute;
+  display:inline-block;
+  width:350px;
+  background-color:white;
+  margin-top:20px;
+}
+
+#scoreBoard div{
+  border:1px solid blue;
+  margin:5px;
+  padding:5px;
+  letter-spacing:1px;
+}
+
+#game{
+  background-color:white;
+  padding:5px;
+  height:125px; /* 135 - 15 = 120 */
+}
+
+#game_line{
+  height:5px;
+  background-color:white;
+}
+
+.game_road{
+  position:relative;
+  height:60px;
+  background-color:gray;
+}
+
+.characters{
+  position:absolute;
+  bottom:0px;
+  left:0px;
+}
+
+.hide{
+  display:none;
 }

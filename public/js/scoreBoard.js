@@ -22,27 +22,52 @@
 // use a global timer to register this function 
 function updateBoardInfo()
 {
-  if (questionReady) {
-    passedTimeIncrease();
+  if (questionReady && !gamePause && !gameOver) {
     modifySpeed();
     modifyCorrectRatio();
     modifyIncorrectRatio();
+    modifyFinishRatio();
+    HTML_modify_score_board();
   }
-  console.log("速率： "+typeSpeed);
+/*  console.log("速率： "+typeSpeed);
   console.log("正確率： "+correctRatio);
   console.log("錯誤率： "+incorrectRatio);
   console.log("經過時間： "+passedTime);
   console.log("正確字數： "+correctWord);
   console.log("錯誤字數： "+incorrectWord);
-  console.log("所有字數： "+totalWord);
+  console.log("所有字數： "+totalWord);*/
+}
+
+function updatePassedTime()
+{
+  if (questionReady && !gamePause && !gameOver) {
+    passedTimeIncrease();
+  }
+}
+
+function HTML_modify_score_board()
+{
+  $("#typeSpeed").html(typeSpeed);
+  $("#correctRatio").html(correctRatio);
+  $("#incorrectRatio").html(incorrectRatio);
+  $("#finishRatio").html(finishRatio);
+  $("#passedTime").html( Math.floor(passedTime/60)+"分"+Math.floor(passedTime%60)+"秒" );
+  $("#correctWord").html(correctWord);
+  $("#incorrectWord").html(incorrectWord);
+  $("#totalWord").html(totalWord+"/"+questionLength);
 }
 
 function modifySpeed()
 {
   var min = (passedTime/60);
 
-  // Unit : words / min
-  typeSpeed = (totalWord/min);
+  if (min == 0) {
+    typeSpeed = (0).toFixed( CONSTANT.TYPE_SPEED_PRECISION );
+  }
+  else {
+    // Unit : words / min
+    typeSpeed = (totalWord/min).toFixed( CONSTANT.TYPE_SPEED_PRECISION );
+  }
 }
 
 function modifyCorrectRatio()
@@ -51,13 +76,28 @@ function modifyCorrectRatio()
     correctRatio = 0;
   }
   else {
-    correctRatio = (correctWord/totalWord);
+    correctRatio = (100*(correctWord/totalWord)).toFixed( CONSTANT.RATIO_PRECISION );
   }
 }
 
 function modifyIncorrectRatio()
 {
-  incorrectRatio = 1-correctRatio;
+  if (totalWord == 0) {
+    correctRatio = 0;
+  }
+  else {
+    incorrectRatio = (100*(incorrectWord/totalWord)).toFixed( CONSTANT.RATIO_PRECISION );
+  }
+}
+
+function modifyFinishRatio()
+{
+  if (totalWord == 0) {
+    finishRatio = 0;
+  }
+  else {
+    finishRatio = (100*(totalWord/questionLength)).toFixed( CONSTANT.RATIO_PRECISION );
+  }
 }
 
 function wordIncrease(which)

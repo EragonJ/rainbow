@@ -23,7 +23,8 @@ function setQuestion()
 			else
 			{
 				questionReady = true;
-				question = request.responseText;
+				question = request.responseText || "當您看到以下訊息，就代表讀取失敗囉。";
+        questionLength = question.length;
 				ModifyQuestion();
 				
 				ajaxDOM.className = "loaded";
@@ -36,7 +37,6 @@ function setQuestion()
 
 function ModifyQuestion()
 {
-
 	var questionDOM     = document.getElementById("question");
 	var out_questionDOM = document.getElementById("out_question");
 	var in_questionDOM  = document.getElementById("in_question");
@@ -45,77 +45,76 @@ function ModifyQuestion()
 	var sSma            = '<span class="smaWord">';
 	var sEnd            = '</span>';
 	var emptyString     = "&nbsp;";
-	var currentWord     = questionDOM.innerHTML;
 
 	//create a 'fake' static variable called currentIndex
-	if( typeof ModifyQuestion.currentIndex == 'undefined' )
+	if( typeof questionBlock.currentIndex == 'undefined' )
 	{
-		ModifyQuestion.currentIndex = 0;
+		questionBlock.currentIndex = 0;
 	}
 	
-	if( typeof ModifyQuestion.leftString == 'undefined' )
+	if( typeof questionBlock.leftString == 'undefined' )
 	{
-		ModifyQuestion.leftString = '';
+		questionBlock.leftString = '';
 	}
 	
-	if( typeof ModifyQuestion.currentString == 'undefined' )
+	if( typeof questionBlock.currentString == 'undefined' )
 	{
-		ModifyQuestion.currentString = question.substr(ModifyQuestion.currentIndex,1);
+		questionBlock.currentString = question.substr(questionBlock.currentIndex,1);
 	}
 
-	if( typeof ModifyQuestion.rightString == 'undefined' )
+	if( typeof questionBlock.rightString == 'undefined' )
 	{
-		ModifyQuestion.rightString = question.substr(ModifyQuestion.currentIndex+1);
+		questionBlock.rightString = question.substr(questionBlock.currentIndex+1);
 	}
 
-	if(ModifyQuestion.currentIndex == 0)
+	if(questionBlock.currentIndex == 0)
 	{
-		questionDOM.innerHTML    = ModifyQuestion.currentString;
-		in_questionDOM.innerHTML = sBig+ModifyQuestion.rightString.slice(0,1)+sEnd+
-															 sMid+ModifyQuestion.rightString.slice(1,2)+sEnd+
-														   sSma+ModifyQuestion.rightString.slice(2,3)+sEnd;
-		ModifyQuestion.currentIndex ++;
+		questionDOM.innerHTML    = questionBlock.currentString;
+		in_questionDOM.innerHTML = sBig+questionBlock.rightString.slice(0,1)+sEnd+
+															 sMid+questionBlock.rightString.slice(1,2)+sEnd+
+														   sSma+questionBlock.rightString.slice(2,3)+sEnd;
+		questionBlock.currentIndex ++;
 	}
-	else if(ModifyQuestion.currentIndex <= question.length)
+	else if(questionBlock.currentIndex <= question.length)
 	{
-		ModifyQuestion.leftString    = question.substr(0,ModifyQuestion.currentIndex);
-		ModifyQuestion.currentString = question.substr(ModifyQuestion.currentIndex,1);
-		ModifyQuestion.rightString   = question.substr(ModifyQuestion.currentIndex+1);
-		questionDOM.innerHTML        = ModifyQuestion.currentString;
+		questionBlock.leftString    = question.substr(0,questionBlock.currentIndex);
+		questionBlock.currentString = question.substr(questionBlock.currentIndex,1);
+		questionBlock.rightString   = question.substr(questionBlock.currentIndex+1);
+		questionDOM.innerHTML        = questionBlock.currentString;
 
-		if(ModifyQuestion.currentIndex == 1)
+		if(questionBlock.currentIndex == 1)
 		{
-			out_questionDOM.innerHTML  = sBig+ModifyQuestion.leftString.slice(-1)+sEnd;
+			out_questionDOM.innerHTML  = sBig+questionBlock.leftString.slice(-1)+sEnd;
 		}
-		else if(ModifyQuestion.currentIndex == 2)
+		else if(questionBlock.currentIndex == 2)
 		{
-			out_questionDOM.innerHTML  = sMid+ModifyQuestion.leftString.slice(-2,-1)+sEnd+
-																	 sBig+ModifyQuestion.leftString.slice(-1)+sEnd;
+			out_questionDOM.innerHTML  = sMid+questionBlock.leftString.slice(-2,-1)+sEnd+
+																	 sBig+questionBlock.leftString.slice(-1)+sEnd;
 		}
 		else
 		{
-			out_questionDOM.innerHTML  = sSma+ModifyQuestion.leftString.slice(-3,-2)+sEnd+
-																	 sMid+ModifyQuestion.leftString.slice(-2,-1)+sEnd+
-																	 sBig+ModifyQuestion.leftString.slice(-1)+sEnd;
+			out_questionDOM.innerHTML  = sSma+questionBlock.leftString.slice(-3,-2)+sEnd+
+																	 sMid+questionBlock.leftString.slice(-2,-1)+sEnd+
+																	 sBig+questionBlock.leftString.slice(-1)+sEnd;
 		}
 
 		//To hold the in_question block
-		if((ModifyQuestion.currentIndex+1)==question.length)
+		if((questionBlock.currentIndex+1)==question.length)
 		{
 			in_questionDOM.innerHTML     = emptyString;
 		}
 		else
 		{
-			in_questionDOM.innerHTML     = sBig+ModifyQuestion.rightString.slice(0,1)+sEnd+
-																	   sMid+ModifyQuestion.rightString.slice(1,2)+sEnd+
-																	   sSma+ModifyQuestion.rightString.slice(2,3)+sEnd;
+			in_questionDOM.innerHTML     = sBig+questionBlock.rightString.slice(0,1)+sEnd+
+																	   sMid+questionBlock.rightString.slice(1,2)+sEnd+
+																	   sSma+questionBlock.rightString.slice(2,3)+sEnd;
 		}
 
-		ModifyQuestion.currentIndex ++ ;
+		questionBlock.currentIndex ++ ;
 	}
 
 	//finished
-	if(ModifyQuestion.currentIndex > question.length)
+	if(questionBlock.currentIndex > question.length)
 	{
 		//To hold the in_question block
 		in_questionDOM.innerHTML     = emptyString;
@@ -123,10 +122,17 @@ function ModifyQuestion()
 		questionDOM.innerHTML        = emptyString;
 
 		alert("finished");
-		return;
+    over();
 	}
-
-	//when typo happened, the return value will help re-checking the codes
-	return currentWord; 
 }
 
+function clearQuestion()
+{
+	var questionDOM     = document.getElementById("question");
+	var out_questionDOM = document.getElementById("out_question");
+	var in_questionDOM  = document.getElementById("in_question");
+
+  $(questionDOM).html('');
+  $(out_questionDOM).html('');
+  $(in_questionDOM).html('');
+}

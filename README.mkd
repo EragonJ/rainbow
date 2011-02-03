@@ -1,44 +1,50 @@
 Introduction
 ============
 
-This project is called **Rainbow** for newbies who want to practice typing. It is an integrated IME that now supports multiple different IME like [Liu](http://boshiamy.com/) and [TsangJei](http://www.eztyping.com.tw/) .
+This project is called **Rainbow** for newbies who want to practice typing. It is an integrated IME that now supports multiple different IME like [Liu](http://boshiamy.com/) and [TsangJei](http://www.eztyping.com.tw/). In this branch, I use JSON as our data format to store all tables. As what you see, this new structure will enhance the portability and make it more flexible to extend!
 
-It's my honor that if you are volunteered to help me to expand the table and usability of the online IME.
+It is very welcome if you are volunteered to help me expand the usability or anything related to Rainbow.
 
-這是一個用來練習輸入法的專案叫做「彩虹」。它是一種整合型的IME，可以支援各種以SQL呈現的表格檔，而目前有支援的是「嘸蝦米」和「大新倉頡」兩種。
+這是一個用來練習輸入法的專案「彩虹」。它是一種整合型的IME，目前看到的這個 Branch 是改用 JSON 當作表格檔的儲存格式，而目前有支援的是「嘸蝦米」和「大新倉頡」兩種輸入法。
 
-ReadMe
-======
+很歡迎大家幫忙我擴充各方面有關 Rainbow 的部分。
 
-Please feel free to go to my demo website [Here](http://rainbow.hax4.in) .Originally there is a bug in liu but fixed just now , so just go ahead to experience this IME.
+Tutorial
+========
 
-At first, The first alert is a specific URL that you can assign by yourself ! Take an example , you can choose any website encoded in *UTF-8*. Then the program will automatically fetch the traditional Chinese and show them up on the screen !!
+Please feel free to go to my demo website [Here](http://eragonj.hax4.in/toys/Rainbow/index.html).
 
-And then see the word to type the correct *key root* to practice ! That's it , so easy and fun !!
+At first, you have to press **開始** button and there will be an alert that you can assign any URL by yourself ! Take an example , you can choose any website encoded in *UTF-8*. Then Rainbow will automatically fetch the traditional Chinese words and show them up on the screen !!
 
-By the way, I forgot to tell that you have to use *F2* to change IME between Liu and TsangJei! 
+And then , just type the *key root* to practice ! That's it , so easy and fun !
+
+By the way, I forgot to tell that you have to use **shift** to change IMEs.
 
 Just enjoy this toy :)
 
-麻煩先到DEMO的網站，[點我](http://rainbow.hax4.in)去試試看。原本「嘸蝦米」的表格檔出了一點問題，不過就在剛剛修復好了，所以快來去試試看這個線上的IME吧。
+麻煩先到DEMO的網站，[點我](http://eragonj.hax4.in/toys/Rainbow/index.html)去試試看。
 
-一開始會先出現一個對話框要你輸入一個URL，那是為了能夠提高樂趣的一個小設計，可以把在UTF-8編碼的網頁中的繁體中文字抓出來當作練習的句子。接下來就輸入字根就能開始練習了。
+點選「開始」就會有一個對話框要請你輸入一個URL，那是為了能夠提高樂趣的一個小設計，可以把在UTF-8編碼的網頁中的繁體中文字抓出來當作練習的句子。接下來就輸入字根就能開始練習了。
 
-剛忘了說，如果要切換輸入法的話麻煩請按**F2**，還有一點美中不足的就是因為主機放在國外，所以讀取速度可能會比較慢一點，這還請多見諒。
+如果要切換輸入法的話麻煩請按**shift**。
 
 請享受這個小玩具吧。
 
 Snapshot
 ========
 
-![imageurl](http://images.plurk.com/3626549_0cc62c0d82149f0a92fe94e88f2a019f.jpg)
+![imageurl](http://eragonj.hax4.in/toys/Rainbow/snap/js1.png)
 
 Author
 ======
 
-EragonJ@hax4.in 陳佳隆
+EragonJ | 陳佳隆
 
-*Email:* jack.xxlong@gmail.com
+Email: eragonj@hax4.in | jack.xxlong@gmail.com
 
-*Blog:* [Here](http://eragonj.hax4.in)
+Blog: [My blow nowhere](http://eragonj.hax4.in)
 
+License
+=======
+
+[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
