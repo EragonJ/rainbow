@@ -33,7 +33,7 @@ Just enjoy this toy :)
 Snapshot
 ========
 
-![imageurl](http://eragonj.hax4.in/toys/Rainbow/snap/js1.png)
+![imageurl](https://github.com/EragonJ/rainbow/raw/js/snap/js1.png)
 
 Author
 ======
