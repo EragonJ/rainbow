@@ -12,7 +12,7 @@ It is very welcome if you are volunteered to help me expand the usability or any
 Tutorial
 ========
 
-Please feel free to go to my demo website [Here](http://eragonj.hax4.in/toys/Rainbow/index.html).
+Please feel free to go to my demo website [Here](http://eragonj.me/toys/rainbow/index.html).
 
 At first, you have to press **開始** button and there will be an alert that you can assign any URL by yourself ! Take an example , you can choose any website encoded in *UTF-8*. Then Rainbow will automatically fetch the traditional Chinese words and show them up on the screen !!
 
@@ -22,7 +22,7 @@ By the way, I forgot to tell that you have to use **shift** to change IMEs.
 
 Just enjoy this toy :)
 
-麻煩先到DEMO的網站，[點我](http://eragonj.hax4.in/toys/Rainbow/index.html)去試試看。
+麻煩先到DEMO的網站，[點我](http://eragonj.me/toys/rainbow/index.html)去試試看。
 
 點選「開始」就會有一個對話框要請你輸入一個URL，那是為了能夠提高樂趣的一個小設計，可以把在UTF-8編碼的網頁中的繁體中文字抓出來當作練習的句子。接下來就輸入字根就能開始練習了。
 
@@ -40,6 +40,6 @@ Author
 
 EragonJ | 陳佳隆
 
-Email: eragonj@hax4.in | jack.xxlong@gmail.com
+Email: eragonj@eragonj.me
 
-Blog: [My blue nowhere](http://eragonj.hax4.in)
+Blog: [My blue nowhere](http://eragonj.me)

@@ -13,6 +13,7 @@
 	preg_match_all($pattern,$content,$result);
 	
 	$result = $result[0];
+    $output = '';
 	foreach( $result as $key => $value)
 	{
 		$output .= $value;
